@@ -8,4 +8,6 @@ Don't bother trying to compile and run the code unless you have a version of Wor
 
 You can always download a free trial version of WPX7 from Corel to try to the WordPerfect Tools program
 
-For a detailed discussion of the code for C# newbies, see the WPUniverse forums.
+For a detailed discussion of the code for C# newbies, see the WPUniverse forums: 
+http://www.wpuniverse.com/vb/forumdisplay.php?89-VB.Net-automation-lessons-and-code-snippets-for-WPO
+
