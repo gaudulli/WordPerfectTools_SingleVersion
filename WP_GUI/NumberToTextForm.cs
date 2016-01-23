@@ -56,6 +56,7 @@ namespace WP_GUI
             listBox1.SelectedIndex = 0;
             label2.Visible = false;
             listBox1.Visible = false;
+            Win32API.ForceWindowIntoForeground(this.Handle);    // switch cursor from WP to new form
             this.ActiveControl = textBox1;
         }
 

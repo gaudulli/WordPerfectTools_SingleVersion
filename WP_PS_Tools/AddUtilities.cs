@@ -354,12 +354,7 @@ namespace WP_PS_Tools
         }
 
 
-        public static void insertHelloWorld(WP_Window wp)
-        {
-            wp.initPerfectScript();
-            wp.PS.KeyType("Hello WordPerfect World!\n");
-            wp.releaseScript();
-        }
+
 
         /// <summary>
         /// returns a string containing the selected text in WP
