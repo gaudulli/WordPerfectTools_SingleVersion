@@ -93,6 +93,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="SampleMergeLetter.wpt" />
+    <None Include="SampleMergeLetter2--deadline.wpt" />
+    <None Include="SampleMergeLetter2--thankyou.wpt" />
     <None Include="SampleMergeLetter2.wpt" />
   </ItemGroup>
   <ItemGroup>
