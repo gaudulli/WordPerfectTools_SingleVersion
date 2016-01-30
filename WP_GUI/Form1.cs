@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Globalization;
-
+using System.IO;
 
 
 using FakeCompany;
@@ -146,16 +146,16 @@ namespace WP_GUI
         {
             // create sample dataset to populate table
             List<string[]> widgets = new List<string[]>();
-            string[] row = new string[3] { "Widget", "Market Share", "Cost" };
+            string[] row = new string[4] { "Widget", "Market Share", "Cost", "Distribution" };
             widgets.Add(row);
-            row = new  string[3] {"blumbers", "80", "$125"};
+            row = new  string[4] {"blumbers", "80", "$125", "Worldwide"};
             widgets.Add(row);
-            row = new  string[3] {"clumbers", "12", "$95" };
+            row = new  string[4] {"clumbers", "12", "$95", "US" };
             widgets.Add(row);
-            row = new string[3] { "trumbers", "8", "$36" };
+            row = new string[4] { "trumbers", "8", "$36", "NorthAmerica"};
             widgets.Add(row);
 
-            int[] weight = new int[3]{10, 3, 2};    // proportionate widths of each column
+            int[] weight = new int[4]{10, 3, 2, 4};    // proportionate widths of each column
 
             AddUtilities.InsertTable(wp, widgets, weight, true);
 
@@ -182,6 +182,33 @@ namespace WP_GUI
             //create merge letters
 
             AddUtilities.InsertMergeLetters(wp, companyList, customerList);
+        }
+
+
+        private void thankYouForPurchaseLetterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //create 2 companies and 2 customers
+            List<Company> companyList = CreateDataSets.createCompanies();
+            List<Customer> customerList = CreateDataSets.createCustomers();
+            // select only certain customers to send letter to
+            customerList = customerList.FindAll(c => c.daysSincePurchase < 45); // this number could also be an option for the user to change
+            string fileName = "SampleMergeLetter2--thankyou.wpt";           
+            // The templates in this project are saved in the solution directory, but usually it would be saved on another network drive
+            string url = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + @"\" + fileName;
+            AddUtilities.insertGenericMergeDocument(wp, companyList, customerList, url);
+
+        }
+
+        private void motivationalLetterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //create 2 companies and 2 customers
+            List<Company> companyList = CreateDataSets.createCompanies();
+            List<Customer> customerList = CreateDataSets.createCustomers();
+            // select only certain customers to send letter to
+            customerList = customerList.FindAll(c => c.daysSincePurchase > 200);
+            string fileName =  "SampleMergeLetter2--deadline.wpt";
+            string url = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + @"\" + fileName;
+            AddUtilities.insertGenericMergeDocument(wp, companyList, customerList, url);
         }
 
 

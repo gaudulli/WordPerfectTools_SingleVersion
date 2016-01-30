@@ -36,6 +36,8 @@
             this.sampleTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.randomTextAndPlaceCursorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sampleMergeLetterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sampleMergeLetterGenericImplementationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motivationalLetterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.convertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numberToTextToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.numberToMoneyLegalStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +84,9 @@
             this.insertToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sampleTablesToolStripMenuItem,
             this.randomTextAndPlaceCursorToolStripMenuItem,
-            this.sampleMergeLetterToolStripMenuItem});
+            this.sampleMergeLetterToolStripMenuItem,
+            this.sampleMergeLetterGenericImplementationToolStripMenuItem,
+            this.motivationalLetterToolStripMenuItem});
             this.insertToolStripMenuItem.Name = "insertToolStripMenuItem";
             this.insertToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.insertToolStripMenuItem.Text = "Insert";
@@ -107,6 +111,20 @@
             this.sampleMergeLetterToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
             this.sampleMergeLetterToolStripMenuItem.Text = "Sample \"Merge\" Letter";
             this.sampleMergeLetterToolStripMenuItem.Click += new System.EventHandler(this.sampleMergeLetterToolStripMenuItem_Click);
+            // 
+            // sampleMergeLetterGenericImplementationToolStripMenuItem
+            // 
+            this.sampleMergeLetterGenericImplementationToolStripMenuItem.Name = "sampleMergeLetterGenericImplementationToolStripMenuItem";
+            this.sampleMergeLetterGenericImplementationToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.sampleMergeLetterGenericImplementationToolStripMenuItem.Text = "Thank You for Purchase Letter";
+            this.sampleMergeLetterGenericImplementationToolStripMenuItem.Click += new System.EventHandler(this.thankYouForPurchaseLetterToolStripMenuItem_Click);
+            // 
+            // motivationalLetterToolStripMenuItem
+            // 
+            this.motivationalLetterToolStripMenuItem.Name = "motivationalLetterToolStripMenuItem";
+            this.motivationalLetterToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.motivationalLetterToolStripMenuItem.Text = "Motivational Letter";
+            this.motivationalLetterToolStripMenuItem.Click += new System.EventHandler(this.motivationalLetterToolStripMenuItem_Click);
             // 
             // convertToolStripMenuItem
             // 
@@ -227,6 +245,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem randomTextAndPlaceCursorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sampleMergeLetterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sampleMergeLetterGenericImplementationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem motivationalLetterToolStripMenuItem;
     }
 }
 

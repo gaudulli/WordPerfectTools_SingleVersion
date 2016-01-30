@@ -58,6 +58,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WP_Reader">
+      <HintPath>..\..\WP_Reader\bin\Release\WP_Reader.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddUtilities.cs" />
